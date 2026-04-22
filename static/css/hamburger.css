@@ -1,0 +1,99 @@
+nav {
+  position: relative;
+}
+hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+hamburger input {
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 3; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: rgba(var(--nav-txt-color), 1);
+  border-radius: 3px;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+hamburger span:first-child {
+  transform-origin: 0% 0%;
+}
+hamburger span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+hamburger input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+hamburger input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+hamburger input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+hamburger #menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100vw;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgba(var(--bg-color), 1);
+  box-sizing: border-box;
+  z-index: 3;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  /*transform: translateY(-100%);*/
+  transform: scaleY(0);
+  transform-origin: top;
+  transition:
+    transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
+    top 0.3s ease,
+    opacity 0.3s ease;
+}
+hamburger input:checked ~ #menu {
+  /*transform: translateY(0);*/
+  transform: scaleY(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+hamburger #menu a {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+  color: inherit;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+hamburger #menu a:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(var(--bg-color), 1);
+}
+
+@media (max-width: 750px) {
+  hamburger {
+    display: flex;
+  }
+}
+
