@@ -1,0 +1,28 @@
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.resources-list {
+  padding: 0 0 1rem 0;
+}
+.resources-list li {
+  list-style: square;
+  list-style-position: inside;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.resources .card {
+  margin: 0 0 3rem 0;
+}
+
+@media (max-width: 500px) {
+  .resources-list {
+    flex-direction: column;
+    padding: 0;
+  }
+}
