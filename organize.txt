@@ -1,0 +1,11 @@
+overlap-layout
+- has a text card with image to the right or under it
+
+text div
+- div containing multiple p tags that are stacked
+
+img-wrapper
+- div with img tag for images
+
+card
+- container with text inside

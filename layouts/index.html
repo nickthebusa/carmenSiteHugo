@@ -3,20 +3,7 @@
 <section class="intro home">
   <h2>Welcome</h2>
 
-  <div class="overlap-layout one">
-    <div class="card one">
-      <p>
-        For well over a decade Carmen's Wellness has been in the health and wellness
-        field and serve many surrounding communities.
-      </p>
-      <p>
-        We bring a full-service, comprehensive approach to your health needs.
-      </p>
-    </div>
-    <div class="img-overlay one img-wrapper">
-      <img src="./pics/apple_heart.webp" alt="fruit heart">
-    </div>
-  </div>
+  {{ partial "content_components/overlap-layout.html" (dict "class" "one" "data" .) }}
 
   <div class="divider"></div>
 
