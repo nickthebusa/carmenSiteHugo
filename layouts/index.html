@@ -3,7 +3,7 @@
 <section class="intro home">
   <h2>Welcome</h2>
 
-  {{ range where (where site.RegularPages "Section" "overlap-layouts") ".Params.tags" "intersect" (slice "home") }}
+  {{ range where (where site.RegularPages "Section" "overlap-layout") ".Params.tags" "intersect" (slice "home") }}
   {{ partial "content_components/overlap-layout.html" (dict "class" "one" "data" .) }}
   {{ end }}
 

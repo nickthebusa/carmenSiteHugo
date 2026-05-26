@@ -8,6 +8,8 @@
   </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/home/</loc>
+  </url><url>
     <loc>http://localhost:1313/overlap-layout/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
