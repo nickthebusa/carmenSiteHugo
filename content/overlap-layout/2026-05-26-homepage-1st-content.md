@@ -8,5 +8,7 @@ text: >-
   We bring a full-service, comprehensive approach to your health needs.
 image: /images/apple_heart.webp
 imageAlt: apple
+tags:
+  - home
 weight: 1
 ---
