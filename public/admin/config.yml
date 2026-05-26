@@ -17,6 +17,7 @@ collections:
       - { label: Text, name: text, widget: markdown }
       - { label: Image, name: image, widget: image }
       - { label: ImageAlt, name: imageAlt, widget: string }
+      - { label: Tags, name: tags, widget: list, default: ["home"] }
       - { label: Weight,
           name: weight,
           widget: number,

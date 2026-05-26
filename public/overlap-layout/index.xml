@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Functional Holistic Treatment</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Functional Holistic Treatment</description>
+    <title>Overlap-Layouts on Functional Holistic Treatment</title>
+    <link>http://localhost:1313/overlap-layout/</link>
+    <description>Recent content in Overlap-Layouts on Functional Holistic Treatment</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/overlap-layout/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>homepage 1st content</title>
       <link>http://localhost:1313/overlap-layout/2026-05-26-homepage-1st-content/</link>
