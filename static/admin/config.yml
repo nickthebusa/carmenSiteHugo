@@ -16,8 +16,13 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
       - { label: Image, name: image, widget: image }
-      - { label: ImageAlt, name: imageAlt, widget: string }
-      - { label: Tags, name: tags, widget: list, default: ["home"] }
+      - { label: Image Alt, name: imageAlt, widget: string }
+      - { label: Tags, 
+          name: tags, 
+          widget: select, 
+          multiple: true, 
+          options: ["home", "services", "resources", "contact"] 
+        }
       - { label: Weight,
           name: weight,
           widget: number,
@@ -32,7 +37,13 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Text, name: text, widget: markdown }
+      - { label: Body, name: body, widget: markdown }
+      - { label: Tags, 
+          name: tags, 
+          widget: select, 
+          multiple: true, 
+          options: ["home", "services", "resources", "contact"] 
+        }
       - { label: Weight,
           name: weight,
           widget: number,
@@ -49,7 +60,13 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Text, name: text, widget: markdown }
       - { label: Image, name: image, widget: image }
-      - { label: ImageAlt, name: imageAlt, widget: string }
+      - { label: Image Alt, name: imageAlt, widget: string }
+      - { label: Tags, 
+          name: tags, 
+          widget: select, 
+          multiple: true, 
+          options: ["home", "services", "resources", "contact"] 
+        }
       - { label: Weight,
           name: weight,
           widget: number,
@@ -64,9 +81,15 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Text, name: text, widget: markdown }
+      - { label: Body, name: body, widget: markdown }
       - { label: Image, name: image, widget: image }
-      - { label: ImageAlt, name: imageAlt, widget: string }
+      - { label: Image Alt, name: imageAlt, widget: string }
+      - { label: Tags, 
+          name: tags, 
+          widget: select, 
+          multiple: true, 
+          options: ["home", "services", "resources", "contact"] 
+        }
       - { label: Weight,
           name: weight,
           widget: number,

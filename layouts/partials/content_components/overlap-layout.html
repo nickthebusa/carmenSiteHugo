@@ -1,8 +1,8 @@
 <div class="overlap-layout {{ .class }}">
-  <div class="card">
+  <div class="card {{ .class }}">
     {{ .data.Content | safeHTML }}
   </div>
-  <div class="img-overlay img-wrapper">
+  <div class="img-overlay img-wrapper {{ .class }}">
     <img src="{{ .data.Params.image }}" alt="{{ .data.Params.imageAlt }}">
   </div>
 </div>

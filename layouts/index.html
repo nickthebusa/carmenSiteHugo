@@ -11,9 +11,14 @@
 
   <section class="mobile-phlebotomy home">
 
-    <h3>Mobile Phlebotomy</h3>
 
     <div class="group-div">
+
+      {{ range where (where site.RegularPages "Section" "text-div") ".Params.tags" "intersect" (slice "home") }}
+      {{ partial "content_components/text-div.html" (dict "data" .) }}
+      {{ end }}
+
+    <h3>Mobile Phlebotomy</h3>
 
       <div class="text-div">
         <p>
