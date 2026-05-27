@@ -1,5 +1,7 @@
 ---
 title: home page intro
+tags:
+  - home
 ---
 ### Mobile Phlebotomy
 
