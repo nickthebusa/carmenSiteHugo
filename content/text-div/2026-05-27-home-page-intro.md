@@ -1,7 +1,5 @@
 ---
 title: mobile phlebototomy (homepage)
-tags:
-  - home
 ---
 ### Mobile Phlebotomy
 
