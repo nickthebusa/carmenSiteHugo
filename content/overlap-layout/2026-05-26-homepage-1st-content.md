@@ -2,8 +2,6 @@
 title: site opener
 image: /images/apple_heart.webp
 imageAlt: apple
-tags:
-  - home
 layout: right
 weight: 1
 ---
