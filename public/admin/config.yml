@@ -17,11 +17,11 @@ collections:
       - { label: Body, name: body, widget: markdown }
       - { label: Image, name: image, widget: image }
       - { label: Image Alt, name: imageAlt, widget: string }
-      - { label: Tags, 
-          name: tags, 
-          widget: select, 
-          multiple: true, 
-          options: ["home", "services", "resources", "contact"] 
+      - { label: Layout,
+          name: layout,
+          widget: select,
+          options: ["left", "right"],
+          default: "left"
         }
       - { label: Weight,
           name: weight,
@@ -38,12 +38,6 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
-      - { label: Tags, 
-          name: tags, 
-          widget: select, 
-          multiple: true, 
-          options: ["home", "services", "resources", "contact"] 
-        }
       - { label: Weight,
           name: weight,
           widget: number,
@@ -61,12 +55,6 @@ collections:
       - { label: Text, name: text, widget: markdown }
       - { label: Image, name: image, widget: image }
       - { label: Image Alt, name: imageAlt, widget: string }
-      - { label: Tags, 
-          name: tags, 
-          widget: select, 
-          multiple: true, 
-          options: ["home", "services", "resources", "contact"] 
-        }
       - { label: Weight,
           name: weight,
           widget: number,
@@ -84,12 +72,6 @@ collections:
       - { label: Body, name: body, widget: markdown }
       - { label: Image, name: image, widget: image }
       - { label: Image Alt, name: imageAlt, widget: string }
-      - { label: Tags, 
-          name: tags, 
-          widget: select, 
-          multiple: true, 
-          options: ["home", "services", "resources", "contact"] 
-        }
       - { label: Weight,
           name: weight,
           widget: number,

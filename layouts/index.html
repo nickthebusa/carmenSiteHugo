@@ -6,10 +6,7 @@
 
   {{ $page := site.GetPage "pages/home" }}
 
-  {{ if $page }}
-  found page: {{ $page.Title }}
-  sections: {{ $page.Params.sections }}
-  {{ else }}
+  {{ if not $page }}
   page not found
   {{ end }}
 

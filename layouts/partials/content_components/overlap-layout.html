@@ -1,4 +1,4 @@
-<div class="overlap-layout {{ .class }}">
+<div class="overlap-layout {{ .data.Params.layout }} {{ .class }}">
   <div class="card {{ .class }}">
     {{ .data.Content | safeHTML }}
   </div>
