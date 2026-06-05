@@ -7,6 +7,16 @@ media_folder: static/images
 public_folder: /images
 
 collections:
+  - name: 'settings'
+    label: 'Site Settings'
+    files:
+      - name: 'general'
+        label: 'General Settings'
+        file: 'data/settings.toml'
+        fields:
+          - { label: Site Title, name: title, widget: string }
+          - { label: Logo, name: logo, widget: image }
+
   - name: 'overlap-layout'
     label: 'Overlap Layout'
     folder: 'content/overlap-layout'
