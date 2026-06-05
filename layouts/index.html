@@ -15,6 +15,8 @@
   {{ $id := .id }}
   {{ $data := site.GetPage (printf "%s/%s" $type $id) }}
 
+  type: {{ $type }} | id: {{ $id }} | found: {{ if $data }}yes{{ else }}no{{ end }}
+
   {{ if $data }}
   {{ partial (printf "content_components/%s.html" $type) (dict "data" $data) }}
   {{ else }}
@@ -31,7 +33,6 @@
 
   </div>
 
-  <div class="divider"></div>
 
   <section class="wellness home">
 

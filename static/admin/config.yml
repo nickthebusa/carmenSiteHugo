@@ -2,10 +2,8 @@ backend:
   name: github
   repo: nickthebusa/carmenSiteHugo
   branch: main
-
 media_folder: static/images
 public_folder: /images
-
 collections:
   - name: 'settings'
     label: 'Site Settings'
@@ -16,12 +14,11 @@ collections:
         fields:
           - { label: Site Title, name: title, widget: string }
           - { label: Logo, name: logo, widget: image }
-
   - name: 'overlap-layout'
     label: 'Overlap Layout'
     folder: 'content/overlap-layout'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
@@ -39,12 +36,11 @@ collections:
           required: false,
           hint: "Optional. Set a number to pin this item. Lower numbers appear first."
         }
-
   - name: 'text-div'
     label: 'Text Div'
     folder: 'content/text-div'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
@@ -54,12 +50,11 @@ collections:
           required: false,
           hint: "Optional. Set a number to pin this item. Lower numbers appear first."
         }
-
   - name: 'image-div'
     label: 'Image Div'
     folder: 'content/image-div'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Text, name: text, widget: markdown }
@@ -71,12 +66,11 @@ collections:
           required: false,
           hint: "Optional. Set a number to pin this item. Lower numbers appear first."
         }
-
   - name: 'card'
     label: 'Card'
     folder: 'content/card'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
@@ -88,7 +82,6 @@ collections:
           required: false,
           hint: "Optional. Set a number to pin this item. Lower numbers appear first."
         }
-
   - name: 'pages'
     label: 'Pages'
     files:
