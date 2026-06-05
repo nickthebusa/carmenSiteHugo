@@ -9,3 +9,11 @@ img-wrapper
 
 card
 - container with text inside
+
+
+TODO: 
+
+- add a way to change global parameters like site name, site logo, etc
+- make hamburger align with title (its a little above)
+- create a card with no border or change text div to allow for images too
+- clean CSS that is too specific

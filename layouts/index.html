@@ -1,106 +1,38 @@
 {{ define "main" }}
 
-<section class="intro home">
+<section class="home">
+
   <h2>Welcome</h2>
 
-  {{ range where (where site.RegularPages "Section" "overlap-layout") ".Params.tags" "intersect" (slice "home") }}
-  {{ partial "content_components/overlap-layout.html" (dict "class" "one" "data" .) }}
+  {{ $page := site.GetPage "pages/home" }}
+
+  {{ if $page }}
+  found page: {{ $page.Title }}
+  sections: {{ $page.Params.sections }}
+  {{ else }}
+  page not found
+  {{ end }}
+
+  {{ range $page.Params.sections }}
+  {{ $type := .type }}
+  {{ $id := .id }}
+  {{ $data := site.GetPage (printf "%s/%s" $type $id) }}
+
+  {{ if $data }}
+  {{ partial (printf "content_components/%s.html" $type) (dict "data" $data) }}
+  {{ else }}
+  <!-- component {{ $id }} not found -->
   {{ end }}
 
   <div class="divider"></div>
 
-  <section class="mobile-phlebotomy home">
+  {{ end }}
 
 
-    <div class="group-div">
+  <div class="group-div">
 
-      {{ range where (where site.RegularPages "Section" "text-div") ".Params.tags" "intersect" (slice "home") }}
-      {{ partial "content_components/text-div.html" (dict "data" .) }}
-      {{ end }}
 
-    <h3>Mobile Phlebotomy</h3>
-
-      <div class="text-div">
-        <p>
-          As the demand for specialized blood testing continues to grow, we’ve expanded our services to meet you
-          where you
-          are—right in the comfort of your own home. With flexible hours to accommodate your busy schedule, we make
-          the process
-          simple and stress-free.
-        </p>
-        <p>
-          From beginning to end, we take care of everything:
-        </p>
-        <ul>
-          <li>reviewing your lab requisition</li>
-          <li>following your lab kit’s instructions</li>
-          <li>drawing and processing your blood</li>
-          <li>securely packaging the specimen</li>
-          <li>shipping it out for you</li>
-        </ul>
-        <p>
-          Our thorough handling ensures your sample reaches the lab safely and on time, so your results are
-          delivered promptly and your provider can guide you toward the right treatment plan without delay.
-        </p>
-      </div>
-
-      <div class="lab-kits">
-        <h3>Lab Kits</h3>
-        <div class="logo-carousel">
-
-          <div class="carousel-prev">
-            <i class="fa-solid fa-chevron-left"></i>
-          </div>
-
-          <div class="carousel-items">
-            <div class="carousel-item">
-              <a href="https://igenex.com/">
-                <img src="./pics/logos/igenex_logo.webp" alt="IGeneX Inc Logo" title="go to site">
-              </a>
-            </div>
-            <div class="carousel-item">
-              <a href="https://infectolab-americas.com/">
-                <img src="./pics/logos/infectolab_logo.webp" alt="Infectolab Logo" title="go to site">
-              </a>
-            </div>
-            <div class="carousel-item">
-              <a href="https://www.gdx.net/">
-                <img src="./pics/logos/genovadiagnostics_logo.webp" alt="Genova Diagnostics Logo" title="go to site">
-              </a>
-            </div>
-            <div class="carousel-item">
-              <a href="https://vibrant-wellness.com/">
-                <img src="./pics/logos/vibrantwellness_logo.webp" alt="Vibrant Wellness Logo" title="go to site">
-              </a>
-            </div>
-            <div class="carousel-item">
-              <a href="https://www.nowleap.com/">
-                <img src="./pics/logos/oxfordbiomedical_logo.webp" alt="Oxford Biomedical Technologies Logo"
-                  title="go to site">
-              </a>
-            </div>
-            <div class="carousel-item">
-              <a href="https://www.natera.com/">
-                <img src="./pics/logos/natera_logo.webp" alt="Natera Logo" title="go to site">
-              </a>
-            </div>
-            <div class="carousel-item">
-              <a href="https://www.ambrygen.com/">
-                <img src="./pics/logos/ambrygenetics_logo.webp" alt="Ambry Genetics Logo" title="go to site">
-              </a>
-            </div>
-          </div>
-
-          <div class="carousel-next">
-            <i class="fa-solid fa-chevron-right"></i>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-  </section>
+  </div>
 
   <div class="divider"></div>
 

@@ -162,6 +162,9 @@ section li {
   display: flex;
   flex-direction: column;
 }
+.text-div h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+}
 .text-div p {
   font-size: 1.3rem;
   margin: 0.7rem 0;
@@ -350,7 +353,7 @@ footer .services {
 }
 
 /* INTRODUCTION */
-section.intro.home {
+section.home {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -394,52 +397,6 @@ section.intro.home {
 }
 
 
-/* MOBILE PHLEBOTOMY */
-section.mobile-phlebotomy.home {
-  position: relative;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-section.mobile-phlebotomy.home h3 {
-  margin: 0;
-  width: 100%;
-  text-align: left;
-}
-section.mobile-phlebotomy.home .lab-kits h3 {
-  text-align: center;
-  margin-top: 0.4rem;
-}
-section.mobile-phlebotomy.home .lab-kits {
-  background-color: rgba(var(--card-bg-color), 1);
-  border-radius: 10px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.mobile-phlebotomy-bg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -5;
-  overflow: hidden;
-  opacity: 0;
-  background-image: url('../pics/needles_bg.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  mask-image: linear-gradient(
-    to top, 
-    white,           
-    white 30%,       
-    transparent      
-  );
-}
 .card.two {
   z-index: 1;
   grid-column: 10 / -1;
@@ -454,6 +411,7 @@ section.mobile-phlebotomy.home .lab-kits {
   border-radius: 5px 0 0 5px;
   max-width: 450px;
 }
+
 
 /* LOGO CAROUSEL */
 .logo-carousel {

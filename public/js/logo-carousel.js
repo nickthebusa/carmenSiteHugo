@@ -3,21 +3,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.querySelector('.carousel-prev');
   const nextBtn = document.querySelector('.carousel-next');
 
-  prevBtn.addEventListener('click', () => {
-    const itemWidth = carouselItems.querySelector('*').clientWidth;
-    carouselItems.scrollBy({
-      left: -itemWidth,
-      behavior: 'smooth'
+  if (prevBtn && nextBtn && carouselItems) {
+    prevBtn.addEventListener('click', () => {
+      const itemWidth = carouselItems.querySelector('*').clientWidth;
+      carouselItems.scrollBy({
+        left: -itemWidth,
+        behavior: 'smooth'
+      });
     });
-  });
 
-  nextBtn.addEventListener('click', () => {
-    const itemWidth = carouselItems.querySelector('*').clientWidth;
-    carouselItems.scrollBy({
-      left: itemWidth,
-      behavior: 'smooth'
+    nextBtn.addEventListener('click', () => {
+      const itemWidth = carouselItems.querySelector('*').clientWidth;
+      carouselItems.scrollBy({
+        left: itemWidth,
+        behavior: 'smooth'
+      });
     });
-  });
+  } else {
+    return;
+  }
 
   function updateButtonStates() {
     if (carouselItems.scrollLeft <= 0) {
@@ -32,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  carouselItems.addEventListener('scroll', updateButtonStates);
-  updateButtonStates();
+    carouselItems.addEventListener('scroll', updateButtonStates);
+    updateButtonStates();
 
   function updateMask() {
     const scrollLeft = carouselItems.scrollLeft;

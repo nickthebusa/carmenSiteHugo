@@ -10,8 +10,12 @@
   </url><url>
     <loc>http://localhost:1313/tags/home/</loc>
   </url><url>
+    <loc>http://localhost:1313/text-div/2026-05-27-home-page-intro/</loc>
+  </url><url>
     <loc>http://localhost:1313/overlap-layout/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/text-div/</loc>
   </url>
 </urlset>
