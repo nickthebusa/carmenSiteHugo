@@ -88,3 +88,27 @@ collections:
           required: false,
           hint: "Optional. Set a number to pin this item. Lower numbers appear first."
         }
+
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - name: 'home'
+        label: 'Home Page'
+        file: 'content/pages/home.md'
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - label: Type
+                name: type
+                widget: select
+                options: ["overlap-layout", "text-div", "card", "image-div"]
+              - label: Component
+                name: id
+                widget: relation
+                collection: overlap-layout
+                search_fields: ["title"]
+                value_field: "{{slug}}"
+                display_fields: ["title"]
