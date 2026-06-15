@@ -199,5 +199,8 @@ collections:
                 fields:
                   - label: Component
                     name: id
-                    widget: string
-                    hint: "Enter the filename of the component (without .md)"
+                    widget: relation
+                    collection: 'image-row'
+                    search_fields: ['title']
+                    value_field: '{{slug}}'
+                    display_fields: ['title']
