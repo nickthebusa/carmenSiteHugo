@@ -88,6 +88,21 @@ collections:
           hint: "Optional. Set a number to pin this item. Lower numbers appear first."
         }
 
+  - name: 'carousel'
+    label: 'Carousel'
+    folder: 'content/carousel'
+    create: true
+    slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Image Alt, name: imageAlt, widget: string }
+          - { label: Link, name: link, widget: string }
+
   - name: 'pages'
     label: 'Pages'
     files:
@@ -148,6 +163,18 @@ collections:
                     name: id
                     widget: relation
                     collection: 'card'
+                    search_fields: ['title']
+                    value_field: '{{slug}}'
+                    display_fields: ['title']
+
+              - label: 'Carousel'
+                name: 'carousel'
+                widget: object
+                fields:
+                  - label: Component
+                    name: id
+                    widget: relation
+                    collection: 'carousel'
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']

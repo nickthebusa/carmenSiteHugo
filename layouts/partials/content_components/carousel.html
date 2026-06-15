@@ -1,0 +1,24 @@
+<div class="carousel">
+  <h3>{{ .data.title }}</h3>
+  <div class="logo-carousel">
+
+    <div class="carousel-prev">
+      <i class="fa-solid fa-chevron-left"></i>
+    </div>
+
+    <div class="carousel-items">
+      {{ range .data.Params.items }}
+      <div class="carousel-item">
+        <a href="{{ .link }}">
+          <img src="{{ .image }}" alt="{{ .imageAlt }}" title="go to site">
+        </a>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="carousel-next">
+      <i class="fa-solid fa-chevron-right"></i>
+    </div>
+
+  </div>
+</div>
