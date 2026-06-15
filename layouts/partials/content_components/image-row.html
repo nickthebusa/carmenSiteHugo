@@ -1,0 +1,7 @@
+<div class="row-wrap-div">
+  {{ range .data.Params.images }}
+  <div class="img-wrapper">
+    <img src="{{ .image }}" alt="{{ .imageAlt }}">
+  </div>
+  {{ end }}
+</div>

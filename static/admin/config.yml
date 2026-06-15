@@ -103,6 +103,20 @@ collections:
           - { label: Image Alt, name: imageAlt, widget: string }
           - { label: Link, name: link, widget: string }
 
+  - name: 'image-row'
+    label: 'Image Row'
+    folder: 'content/image-row'
+    create: true
+    slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - label: Images
+        name: images
+        widget: list
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Image Alt, name: imageAlt, widget: string }
+
   - name: 'pages'
     label: 'Pages'
     files:
@@ -178,3 +192,12 @@ collections:
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
+
+              - label: 'Image Row'
+                name: 'image-row'
+                widget: object
+                fields:
+                  - label: Component
+                    name: id
+                    widget: string
+                    hint: "Enter the filename of the component (without .md)"

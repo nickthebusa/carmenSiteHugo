@@ -358,7 +358,6 @@ section.home {
   display: flex;
   flex-direction: column;
   width: 100%;
-  z-index: -1;
 }
 .home-introduction-bg {
   opacity: 0;
@@ -414,6 +413,14 @@ section.home {
 
 
 /* LOGO CAROUSEL */
+.carousel {
+  background-color: rgba(var(--card-bg-color), 1);
+  border-radius: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .logo-carousel {
   display: flex;
   flex-direction: row;
@@ -466,17 +473,6 @@ section.home {
 }
 
 
-/* WELLNESS */
-section.wellness.home h3 {
-  margin: 0;
-  width: 100%;
-  text-align: left;
-}
-.wellness.home .row-wrap-div {
-  margin: 1.5rem 0;
-  overflow: hidden;
-  border-radius: 10px;
-}
 
 /* PAGE BOTTOM */
 .contact-btn {
