@@ -117,6 +117,21 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Image Alt, name: imageAlt, widget: string }
 
+  - name: 'media-block'
+    label: 'Media Block'
+    folder: 'content/media-block'
+    create: true
+    slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }
+      - label: Images
+        name: images
+        widget: list
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Image Alt, name: imageAlt, widget: string }
+
   - name: 'pages'
     label: 'Pages'
     files:
@@ -193,14 +208,14 @@ collections:
                     value_field: '{{slug}}'
                     display_fields: ['title']
 
-              - label: 'Image Row'
-                name: 'image-row'
+              - label: 'Media-Block'
+                name: 'media-block'
                 widget: object
                 fields:
                   - label: Component
                     name: id
                     widget: relation
-                    collection: 'image-row'
+                    collection: 'media-block'
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
