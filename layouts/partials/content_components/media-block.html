@@ -1,11 +1,13 @@
 <div class="media-block">
   <h3>{{ .data.Title }}</h3>
-  <div class="row-wrap-div">
-    {{ range .data.Params.images }}
-    <div class="img-wrapper">
-      <img src="{{ .image }}" alt="{{ .imageAlt }}">
+  <div class="centering-div">
+    <div class="row-wrap-div">
+      {{ range .data.Params.images }}
+      <div class="img-wrapper">
+        <img src="{{ .image }}" alt="{{ .imageAlt }}">
+      </div>
+      {{ end }}
     </div>
-    {{ end }}
   </div>
   {{ .data.Content | safeHTML }}
 </div>

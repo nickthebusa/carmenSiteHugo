@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="home">
+<section>
 
   <h2>Welcome</h2>
 
@@ -17,61 +17,17 @@
 
   {{ if $data }}
   {{ partial (printf "content_components/%s.html" $type) (dict "data" $data) }}
+
   {{ else }}
   <!-- component {{ $id }} not found -->
   {{ warnf "Missing component %q in collection %q" $id $type }}
+
   {{ end }}
 
+  <!-- divider at bottom of every component -->
   <div class="divider"></div>
 
   {{ end }}
-
-
-  <div class="group-div">
-
-
-  </div>
-
-
-  <section class="wellness home">
-
-    <h3>Supporting Your Wellness Beyond Blood Work</h3>
-
-    <div class="row-wrap-div">
-      <div class="img-wrapper hands">
-        <img src="./pics/spoons.webp" alt="holistic spoons">
-      </div>
-      <div class="img-wrapper">
-        <img src="./pics/wellness_cubes.webp" alt="wellness">
-      </div>
-    </div>
-
-    <div class="text-div">
-      <p>
-        In addition to our phlebotomy services, we also offer Full Body Biofeedback Scans to help you
-        better understand your
-        health and feel your best. Our holistic approach is designed to bring balance to both body and mind.
-      </p>
-    </div>
-
-    <div class="text-div">
-      <p>
-        Not sure which supplements are right for you? Biofeedback takes the guesswork out by analyzing your body’s
-        unique energy
-        patterns, offering personalized insights tailored to your individual needs. What works for one person may
-        not
-        work for
-        another—and that’s exactly why personalization matters.
-      </p>
-      <p>
-        Best of all, this service is available remotely, so you can receive valuable health insights from the
-        comfort
-        of your
-        own home.
-      </p>
-    </div>
-
-  </section>
 
   <section class="bottom home">
     <a href="contact.html" class="contact-btn">
