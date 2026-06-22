@@ -1,0 +1,44 @@
+/* ----- action-button ----- */
+.contact-btn {
+  background-color: rgba(var(--nav-txt-color), 1);
+  color: rgba(var(--bg-color), 1);
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.contact-btn:hover {
+  background-color: rgba(var(--bg-color), 1);
+  color: rgba(var(--nav-txt-color), 1);
+  cursor: pointer;
+  outline: 3px solid rgba(var(--nav-txt-color), 1);
+}
+
+.contact-btn p {
+  font-weight: 900;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contact-btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* ----- image-div ----- */
+.img-wrapper.cover-image {
+  height: 15rem;
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-wrapper.cover-image img {
+  object-fit: cover;
+}

@@ -507,7 +507,7 @@ footer .services {
   color: inherit;
 }
 
-section.bottom.home .img-wrapper {
+.img-wrapper.cover-image {
   height: 15rem;
   width: 100%;
   max-width: none;
@@ -515,7 +515,7 @@ section.bottom.home .img-wrapper {
   border-radius: 10px;
 }
 
-section.bottom.home .img-wrapper img {
+.img-wrapper.cover-image img {
   object-fit: cover;
 }
 
