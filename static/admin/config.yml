@@ -110,13 +110,13 @@ collections:
     slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Body, name: body, widget: markdown }
       - label: Images
         name: images
         widget: list
         fields:
           - { label: Image, name: image, widget: image }
           - { label: Image Alt, name: imageAlt, widget: string }
+      - { label: Body, name: body, widget: markdown }
 
   - name: 'pages'
     label: 'Pages'
