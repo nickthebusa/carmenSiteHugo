@@ -103,20 +103,6 @@ collections:
           - { label: Image Alt, name: imageAlt, widget: string }
           - { label: Link, name: link, widget: string }
 
-  - name: 'image-row'
-    label: 'Image Row'
-    folder: 'content/image-row'
-    create: true
-    slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
-    fields:
-      - { label: Title, name: title, widget: string }
-      - label: Images
-        name: images
-        widget: list
-        fields:
-          - { label: Image, name: image, widget: image }
-          - { label: Image Alt, name: imageAlt, widget: string }
-
   - name: 'media-block'
     label: 'Media Block'
     folder: 'content/media-block'
