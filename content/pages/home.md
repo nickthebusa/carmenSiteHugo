@@ -7,4 +7,6 @@ sections:
     id: "20260605225424"
   - type: carousel
     id: "20260615222243"
+  - type: media-block
+    id: "20260622193655"
 ---
