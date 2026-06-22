@@ -11,4 +11,6 @@ sections:
     id: "20260622193655"
   - type: action-button
     id: "20260622225317"
+  - type: image-div
+    id: "20260622230051"
 ---
