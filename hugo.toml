@@ -1,8 +1,8 @@
 baseURL = 'https://functionalholistictreatment.com/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Functional Holistic Treatment'
 [cascade]
-  [cascade._build]
+  [cascade.build]
     render = "never"
     list = "never"
   [cascade.target]
