@@ -15,6 +15,12 @@ collections:
         fields:
           - { label: Site Title, name: title, widget: string }
           - { label: Logo, name: logo, widget: image }
+          - label: Services
+            name: services
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Value, name: value, widget: string }
 
   - name: 'overlap-layout'
     label: 'Overlap Layout'
@@ -47,6 +53,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
+      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class to this button." }
       - { label: Weight,
           name: weight,
           widget: number,
@@ -81,7 +88,8 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
       - { label: Image, name: image, widget: image, required: false }
-      - { label: Image Alt, name: imageAlt, widget: string }
+      - { label: Image Alt, name: imageAlt, widget: string,required: false }
+      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class to this button." }
       - { label: Weight,
           name: weight,
           widget: number,
@@ -118,6 +126,7 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Image Alt, name: imageAlt, widget: string }
       - { label: Body, name: body, widget: markdown }
+      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class to this button." }
 
   - name: 'action-button'
     label: 'Action-Button'
@@ -228,6 +237,28 @@ collections:
                     name: id
                     widget: relation
                     collection: 'action-button'
+                    search_fields: ['title']
+                    value_field: '{{slug}}'
+                    display_fields: ['title']
+
+      - name: 'contact'
+        label: 'Contact Page'
+        file: 'content/pages/contact.md'
+        fields:
+          - { label: Title, name: title, widget: string }
+
+          - label: Sections
+            name: sections
+            widget: list
+            types:
+              - label: 'Card'
+                name: 'card'
+                widget: object
+                fields:
+                  - label: Component
+                    name: id
+                    widget: relation
+                    collection: 'card'
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']

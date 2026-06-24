@@ -43,19 +43,12 @@
                   <legend>What service(s) interests you</legend>
 
                   <div data-group="services" class="services-options">
+                    {{ range hugo.Data.settings.services }}
                     <label>
-                      <input type="checkbox" name="services" value="mobile-phlebotomy" />
-                      Mobile Phlebotomy
+                      <input type="checkbox" name="services" value="{{ .value }}" />
+                      {{ .label }}
                     </label>
-                    <label>
-                      <input type="checkbox" name="services" value="biofeedback-scan" />
-                      Biofeedback Scan
-                    </label>
-
-                    <label>
-                      <input type="checkbox" name="services" value="spatial-harmony" />
-                      Spatial Harmony
-                    </label>
+                    {{ end }}
                   </div>
 
                 </fieldset>
@@ -95,34 +88,34 @@
 
       </div>
 
+      {{ $page := site.GetPage "pages/contact" }}
+
+      {{ if not $page }}
+      page not found
+      {{ end }}
+
+      {{ range $page.Params.sections }}
+      {{ $type := .type }}
+      {{ $id := .id }}
+      {{ $data := site.GetPage (printf "%s/%s" $type $id) }}
+
+      {{ if $data }}
+      {{ partial (printf "content_components/%s.html" $type) (dict "data" $data) }}
+
+      {{ else }}
+      <!-- component {{ $id }} not found -->
+      {{ warnf "Missing component %q in collection %q" $id $type }}
+
+      {{ end }}
+
+      <!-- divider at bottom of every component -->
+      <div class="divider"></div>
+
+      {{ end }}
 
     </section>
   </main>
 
-  {{ $page := site.GetPage "pages/contact" }}
-
-  {{ if not $page }}
-  page not found
-  {{ end }}
-
-  {{ range $page.Params.sections }}
-  {{ $type := .type }}
-  {{ $id := .id }}
-  {{ $data := site.GetPage (printf "%s/%s" $type $id) }}
-
-  {{ if $data }}
-  {{ partial (printf "content_components/%s.html" $type) (dict "data" $data) }}
-
-  {{ else }}
-  <!-- component {{ $id }} not found -->
-  {{ warnf "Missing component %q in collection %q" $id $type }}
-
-  {{ end }}
-
-  <!-- divider at bottom of every component -->
-  <div class="divider"></div>
-
-  {{ end }}
 
 </section>
 
