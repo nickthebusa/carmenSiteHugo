@@ -69,15 +69,6 @@ fieldset {
   border: none;
   width: 100%;
 }
-.flex-card.serving-areas {
-  margin: 0 0 3rem 0;
-  border-radius: 0 0 5px 5px;
-  max-width: none;
-  width: 100%;
-}
-.flex-card.serving-areas p {
- font-size: 1rem;
-}
 
 /* loader screen */
 .loader-overlay {
@@ -113,10 +104,14 @@ fieldset {
   animation: l3-1 .75s cubic-bezier(0,900,1,900) infinite;
 }
 
+
+/*changes cards style*/
+/*
 section.contact .flex-card {
   background-color: rgba(var(--bg-color), 1);
   box-shadow: none;
 }
+*/
 
 @keyframes l3-0 {
   to {background-position: -125% 100%}
