@@ -1,10 +1,8 @@
-<div class="{{ .data.Params.styleName }}">
-  <a href="{{ .data.Params.url }}">
-    {{ if .data.Params.text }}
-    <p>{{ .data.Params.text }}</p>
-    {{ end }}
-    {{ if .data.Params.image }}
-    <img class="img-wrapper" src="{{ .data.Params.image }}" alt="{{ .data.Params.imageAlt }}" />
-    {{ end }}
-  </a>
-</div>
+<a href="{{ .data.Params.link }}" class="{{ .data.Params.styleName }}">
+  {{ if .data.Params.text }}
+  <p>{{ .data.Params.text }}</p>
+  {{ end }}
+  {{ if .data.Params.image }}
+  <img class="img-wrapper" src="{{ .data.Params.image }}" alt="{{ .data.Params.imageAlt }}" />
+  {{ end }}
+</a>

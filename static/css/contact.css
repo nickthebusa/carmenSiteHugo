@@ -1,4 +1,4 @@
-.group-div {
+section.contact {
   max-width: 1000px;
   width: calc(100% - 4rem);
 }
@@ -127,7 +127,7 @@ section.contact .flex-card {
 }
 
 @media (max-width: 500px) {
-  .group-div {
+  section.contact {
     width: calc(100% - 1rem);
   }
 }

@@ -135,7 +135,7 @@ collections:
     slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: URL, name: link, widget: string }
+      - { label: Link, name: link, widget: string }
       - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class to this button." }
       - { label: Text, name: text, widget: string, required: false }
       - { label: Image, name: image, widget: image, required: false }
