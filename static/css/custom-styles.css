@@ -37,3 +37,9 @@
 .img-wrapper.cover-image img {
   object-fit: cover;
 }
+
+/* ----- text-div ----- */
+.flex-card.no-rect {
+  background-color: rgba(var(--bg-color), 1);
+  box-shadow: none;
+}
