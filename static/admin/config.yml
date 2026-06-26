@@ -143,18 +143,6 @@ collections:
       - { label: Image, name: image, widget: image, required: false }
       - { label: Image Alt, name: imageAlt, widget: string, required: false }
 
-  - name: 'list-link'
-    label: 'List Link'
-    folder: 'content/list-link'
-    create: true
-    slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Url, name: link, widget: string }
-      - { label: Text, name: text, widget: string }
-      - { label: Image, name: image, widget: image, required: false }
-      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class." }
-
   - name: 'pages'
     label: 'Pages'
     files:
@@ -286,12 +274,17 @@ collections:
             name: sections
             widget: list
             types:
-              - label: Links
-                name: links
-                widget: list
+              - label: 'List Link Group'
+                name: 'list-link'
+                widget: object
                 fields:
-                  - { label: Text, name: text, widget: string }
-                  - { label: URL, name: link, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - label: Links
+                    name: links
+                    widget: list
+                    fields:
+                      - { label: Text, name: text, widget: string }
+                      - { label: URL, name: link, widget: string }
 
       - name: 'services-index'
         label: 'Services Page'

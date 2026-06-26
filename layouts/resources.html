@@ -2,14 +2,16 @@
 
 <h2>Resources</h2>
 
-{{ with .Params.links }}
-<div class="card">
-  <ul class="resources-list">
-    {{ range . }}
-    {{ partial "content_components/list-link.html" . }}
-    {{ end }}
-  </ul>
-</div>
+{{ range .Params.sections }}
+  {{ if eq .type "list-link" }}
+    <div class="card">
+      <ul class="resources-list">
+        {{ range .links }}
+          {{ partial "content_components/list-link.html" . }}
+        {{ end }}
+      </ul>
+    </div>
+  {{ end }}
 {{ end }}
 
 {{ end }}
