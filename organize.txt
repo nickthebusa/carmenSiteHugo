@@ -3,3 +3,5 @@ TODO:
 - make hamburger align with title (its a little above)
 - change the animations slightly (maybe cache if they have played)
 - make the services in footer dynamic
+- make sure the select service dropdown stays on each service page (could create a partial)
+- tweak css (services list page, action-button)
