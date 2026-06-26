@@ -293,7 +293,7 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: URL, name: url, widget: string, default: '/services/{{slug}}' }
+      - { label: URL, name: url, widget: string, default: '/services/<new-service>' }
       - { label: Build Render, name: build.render, widget: hidden, default: always }
       - { label: Service Image, name: image, widget: image }
       - { label: Summary, name: summary, widget: text }
