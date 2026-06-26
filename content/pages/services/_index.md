@@ -1,5 +1,8 @@
 ---
 title: Services
-layout: services
-url: /services
+url: "/services"
+type: "services"
+build:
+    render: always
+    list: always
 ---

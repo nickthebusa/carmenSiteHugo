@@ -1,19 +1,5 @@
-overlap-layout
-- has a text card with image to the right or under it
-
-text div
-- div containing multiple p tags that are stacked
-
-img-wrapper
-- div with img tag for images
-
-card
-- container with text inside
-
-
 TODO: 
-
-- add a way to change global parameters like site name, site logo, etc
+- possibly add a theme switch
 - make hamburger align with title (its a little above)
-- create a card with no border or change text div to allow for images too
-- clean CSS that is too specific
+- change the animations slightly (maybe cache if they have played)
+- make the services in footer dynamic

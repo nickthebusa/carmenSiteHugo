@@ -5,7 +5,9 @@ backend:
 media_folder: static/images
 public_folder: /images
 
+
 collections:
+
   - name: 'settings'
     label: 'Site Settings'
     files:
@@ -53,7 +55,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
-      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class to this button." }
+      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class" }
       - { label: Weight,
           name: weight,
           widget: number,
@@ -88,8 +90,8 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
       - { label: Image, name: image, widget: image, required: false }
-      - { label: Image Alt, name: imageAlt, widget: string,required: false }
-      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class to this button." }
+      - { label: Image Alt, name: imageAlt, widget: string, required: false }
+      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class." }
       - { label: Weight,
           name: weight,
           widget: number,
@@ -126,7 +128,7 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Image Alt, name: imageAlt, widget: string }
       - { label: Body, name: body, widget: markdown }
-      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class to this button." }
+      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class." }
 
   - name: 'action-button'
     label: 'Action-Button'
@@ -136,7 +138,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Link, name: link, widget: string }
-      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class to this button." }
+      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class." }
       - { label: Text, name: text, widget: string, required: false }
       - { label: Image, name: image, widget: image, required: false }
       - { label: Image Alt, name: imageAlt, widget: string, required: false }
@@ -149,13 +151,9 @@ collections:
         file: 'content/pages/home.md'
         fields:
           - { label: Title, name: title, widget: string }
-
-          # ⬇️  This is the page-builder list
           - label: Sections
             name: sections
             widget: list
-            # "types" replaces "fields" — each entry is a
-            # different kind of section the admin can add
             types:
               - label: 'Overlap Layout'
                 name: 'overlap-layout'
@@ -168,7 +166,6 @@ collections:
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
-
               - label: 'Text Div'
                 name: 'text-div'
                 widget: object
@@ -180,7 +177,6 @@ collections:
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
-
               - label: 'Image Div'
                 name: 'image-div'
                 widget: object
@@ -192,7 +188,6 @@ collections:
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
-
               - label: 'Card'
                 name: 'card'
                 widget: object
@@ -204,7 +199,6 @@ collections:
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
-
               - label: 'Carousel'
                 name: 'carousel'
                 widget: object
@@ -216,7 +210,6 @@ collections:
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
-
               - label: 'Media-Block'
                 name: 'media-block'
                 widget: object
@@ -228,7 +221,6 @@ collections:
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
-
               - label: 'Action-Button'
                 name: 'action-button'
                 widget: object
@@ -246,7 +238,6 @@ collections:
         file: 'content/pages/contact.md'
         fields:
           - { label: Title, name: title, widget: string }
-
           - label: Sections
             name: sections
             widget: list
@@ -262,7 +253,6 @@ collections:
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
-
               - label: 'Text Div'
                 name: 'text-div'
                 widget: object
@@ -274,3 +264,117 @@ collections:
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
+
+      - name: 'services-index'
+        label: 'Services Page'
+        file: 'content/pages/services/_index.md'
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Sections
+            name: sections
+            widget: list
+            types:
+              - label: 'Text Div'
+                name: 'text-div'
+                widget: object
+                fields:
+                  - label: Component
+                    name: id
+                    widget: relation
+                    collection: 'text-div'
+                    search_fields: ['title']
+                    value_field: '{{slug}}'
+                    display_fields: ['title']
+
+  - name: 'service-pages'
+    label: 'Service Pages'
+    folder: 'content/pages/services'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: URL, name: url, widget: string, default: '/services/{{slug}}' }
+      - { label: Build Render, name: build.render, widget: hidden, default: always }
+      - { label: Service Image, name: image, widget: image }
+      - { label: Summary, name: summary, widget: text }
+      - label: Sections
+        name: sections
+        widget: list
+        types:
+          - label: 'Overlap Layout'
+            name: 'overlap-layout'
+            widget: object
+            fields:
+              - label: Component
+                name: id
+                widget: relation
+                collection: 'overlap-layout'
+                search_fields: ['title']
+                value_field: '{{slug}}'
+                display_fields: ['title']
+          - label: 'Text Div'
+            name: 'text-div'
+            widget: object
+            fields:
+              - label: Component
+                name: id
+                widget: relation
+                collection: 'text-div'
+                search_fields: ['title']
+                value_field: '{{slug}}'
+                display_fields: ['title']
+          - label: 'Image Div'
+            name: 'image-div'
+            widget: object
+            fields:
+              - label: Component
+                name: id
+                widget: relation
+                collection: 'image-div'
+                search_fields: ['title']
+                value_field: '{{slug}}'
+                display_fields: ['title']
+          - label: 'Card'
+            name: 'card'
+            widget: object
+            fields:
+              - label: Component
+                name: id
+                widget: relation
+                collection: 'card'
+                search_fields: ['title']
+                value_field: '{{slug}}'
+                display_fields: ['title']
+          - label: 'Carousel'
+            name: 'carousel'
+            widget: object
+            fields:
+              - label: Component
+                name: id
+                widget: relation
+                collection: 'carousel'
+                search_fields: ['title']
+                value_field: '{{slug}}'
+                display_fields: ['title']
+          - label: 'Media-Block'
+            name: 'media-block'
+            widget: object
+            fields:
+              - label: Component
+                name: id
+                widget: relation
+                collection: 'media-block'
+                search_fields: ['title']
+                value_field: '{{slug}}'
+                display_fields: ['title']
+          - label: 'Action-Button'
+            name: 'action-button'
+            widget: object
+            fields:
+              - label: Component
+                name: id
+                widget: relation
+                collection: 'action-button'
+                search_fields: ['title']
+                value_field: '{{slug}}'
+                display_fields: ['title']

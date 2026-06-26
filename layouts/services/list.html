@@ -1,7 +1,11 @@
 {{ define "main" }}
-
-<div>
-  services list
-</div>
-
+<section class="services">
+  {{ range .Pages }}
+  <a href="{{ .Permalink }}">
+    <div class="service-card">
+      <h2>{{ .Title }}</h2>
+    </div>
+  </a>
+  {{ end }}
+</section>
 {{ end }}

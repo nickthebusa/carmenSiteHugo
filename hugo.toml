@@ -1,9 +1,3 @@
 baseURL = 'https://functionalholistictreatment.com/'
 locale = 'en-us'
 title = 'Functional Holistic Treatment'
-[cascade]
-  [cascade.build]
-    render = "never"
-    list = "never"
-  [cascade.target]
-    path = "/{card,overlap-layout,text-div,image-div}/**"
