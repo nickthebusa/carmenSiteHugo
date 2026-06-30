@@ -143,6 +143,21 @@ collections:
       - { label: Image, name: image, widget: image, required: false }
       - { label: Image Alt, name: imageAlt, widget: string, required: false }
 
+  - name: 'heading'
+    label: 'Heading'
+    folder: 'content/heading'
+    create: true
+    slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class." }
+      - { label: Weight,
+          name: weight,
+          widget: number,
+          required: false,
+          hint: "Optional. Set a number to pin this item. Lower numbers appear first."
+        }
+
   - name: 'pages'
     label: 'Pages'
     files:
@@ -155,6 +170,17 @@ collections:
             name: sections
             widget: list
             types:
+              - label: 'Heading'
+                name: 'heading'
+                widget: object
+                fields:
+                  - label: Component
+                    name: id
+                    widget: relation
+                    collection: 'heading'
+                    search_fields: ['title']
+                    value_field: '{{slug}}'
+                    display_fields: ['title']
               - label: 'Overlap Layout'
                 name: 'overlap-layout'
                 widget: object
@@ -242,6 +268,17 @@ collections:
             name: sections
             widget: list
             types:
+              - label: 'Heading'
+                name: 'heading'
+                widget: object
+                fields:
+                  - label: Component
+                    name: id
+                    widget: relation
+                    collection: 'heading'
+                    search_fields: ['title']
+                    value_field: '{{slug}}'
+                    display_fields: ['title']
               - label: 'Card'
                 name: 'card'
                 widget: object
@@ -274,6 +311,17 @@ collections:
             name: sections
             widget: list
             types:
+              - label: 'Heading'
+                name: 'heading'
+                widget: object
+                fields:
+                  - label: Component
+                    name: id
+                    widget: relation
+                    collection: 'heading'
+                    search_fields: ['title']
+                    value_field: '{{slug}}'
+                    display_fields: ['title']
               - label: 'List Link Group'
                 name: 'list-link'
                 widget: object
@@ -322,6 +370,17 @@ collections:
         name: sections
         widget: list
         types:
+          - label: 'Heading'
+            name: 'heading'
+            widget: object
+            fields:
+              - label: Component
+                name: id
+                widget: relation
+                collection: 'heading'
+                search_fields: ['title']
+                value_field: '{{slug}}'
+                display_fields: ['title']
           - label: 'Overlap Layout'
             name: 'overlap-layout'
             widget: object

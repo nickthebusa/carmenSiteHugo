@@ -1,7 +1,18 @@
 TODO: 
+
+! add each service page content and edit the single.html template
+
 - possibly add a theme switch
 - make hamburger align with title (its a little above)
 - change the animations slightly (maybe cache if they have played)
 - make the services in footer dynamic
 - make sure the select service dropdown stays on each service page (could create a partial)
 - tweak css (services list page, action-button)
+
+- look for a better font
+- think of some new components that would fit content
+
+- see if there is a way to remove association with component when deleting it
+  (when removing the component, remove the association from the page)
+
+- see if there is a way to go to page, add section then create component there
