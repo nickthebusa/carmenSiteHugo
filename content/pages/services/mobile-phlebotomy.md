@@ -13,4 +13,6 @@ sections:
     id: "20260630182528"
   - type: image-div
     id: "20260630183203"
+  - type: carousel
+    id: "20260615222243"
 ---
