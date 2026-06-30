@@ -159,6 +159,27 @@ collections:
           hint: "Optional. Set a number to pin this item. Lower numbers appear first."
         }
 
+  - name: 'divider'
+    label: 'Divider'
+    folder: 'content/divider'
+    create: true
+    slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class." }
+
+  - name: 'banner'
+    label: 'Banner'
+    folder: 'content/banner'
+    create: true
+    slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Tagline, name: tagline, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { label: Image Alt, name: imageAlt, widget: string, required: false }
+      - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class." }
+
   - name: 'pages'
     label: 'Pages'
     files:
@@ -256,6 +277,17 @@ collections:
                     name: id
                     widget: relation
                     collection: 'action-button'
+                    search_fields: ['title']
+                    value_field: '{{slug}}'
+                    display_fields: ['title']
+              - label: 'Divider'
+                name: 'divider'
+                widget: object
+                fields:
+                  - label: Component
+                    name: id
+                    widget: relation
+                    collection: 'divider'
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
@@ -456,6 +488,17 @@ collections:
                 name: id
                 widget: relation
                 collection: 'action-button'
+                search_fields: ['title']
+                value_field: '{{slug}}'
+                display_fields: ['title']
+          - label: 'Divider'
+            name: 'divider'
+            widget: object
+            fields:
+              - label: Component
+                name: id
+                widget: relation
+                collection: 'divider'
                 search_fields: ['title']
                 value_field: '{{slug}}'
                 display_fields: ['title']
