@@ -11,4 +11,6 @@ sections:
     id: "20260630181942"
   - type: card
     id: "20260630182528"
+  - type: image-div
+    id: "20260630183203"
 ---
