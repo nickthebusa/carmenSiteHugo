@@ -18,3 +18,7 @@ TODO:
 - see if there is a way to go to page, add section then create component there
 
 - for each page, have an associated class name that i can use in a section to have style changes for that page
+
+- reorder the services page (or set the order)
+
+- add animation to service dropdown to let user know it is a dropdown

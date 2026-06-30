@@ -46,18 +46,26 @@
   box-shadow: none;
 }
 
+/* ----- overlap-layout ----- */
+@media (max-width: 1000px) {
+  .overlap-layout.right.three {
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 600px) {
+  .overlap-layout.right.three {
+    flex-direction: column;
+  }
+}
+
 
 /* Custom Page Styles */
 
 /* ----- services ----- */
-.service-mobile-phlebotomy {
-}
+.service-mobile-phlebotomy {}
 
-.service-biofeedback-scan {
-}
+.service-biofeedback-scan {}
 
-.service-spatial-harmony {
-}
+.service-spatial-harmony {}
 
-.service-health-consulting {
-}
+.service-health-consulting {}

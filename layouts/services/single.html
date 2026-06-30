@@ -1,5 +1,9 @@
 {{ define "main" }}
 
+{{ with site.GetPage "pages/services" }}
+{{ partial "service-dropdown.html" . }}
+{{ end }}
+
 <section class="service-{{ .File.ContentBaseName }}">
   {{ range .Params.sections }}
   {{ $type := .type }}
