@@ -291,6 +291,17 @@ collections:
                     search_fields: ['title']
                     value_field: '{{slug}}'
                     display_fields: ['title']
+              - label: 'Banner'
+                name: 'banner'
+                widget: object
+                fields:
+                  - label: Component
+                    name: id
+                    widget: relation
+                    collection: 'banner'
+                    search_fields: ['title']
+                    value_field: '{{slug}}'
+                    display_fields: ['title']
 
       - name: 'contact'
         label: 'Contact Page'
@@ -499,6 +510,17 @@ collections:
                 name: id
                 widget: relation
                 collection: 'divider'
+                search_fields: ['title']
+                value_field: '{{slug}}'
+                display_fields: ['title']
+          - label: 'Banner'
+            name: 'banner'
+            widget: object
+            fields:
+              - label: Component
+                name: id
+                widget: relation
+                collection: 'banner'
                 search_fields: ['title']
                 value_field: '{{slug}}'
                 display_fields: ['title']
