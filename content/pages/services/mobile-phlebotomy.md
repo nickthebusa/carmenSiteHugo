@@ -15,4 +15,6 @@ sections:
     id: "20260630183203"
   - type: carousel
     id: "20260615222243"
+  - type: card
+    id: "20260630193309"
 ---
