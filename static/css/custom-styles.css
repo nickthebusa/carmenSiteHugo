@@ -1,3 +1,5 @@
+/* Custom COMPONENT STYLES */
+
 /* ----- action-button ----- */
 .contact-btn {
   background-color: rgba(var(--nav-txt-color), 1);
@@ -42,4 +44,20 @@
 .flex-card.no-rect {
   background-color: rgba(var(--bg-color), 1);
   box-shadow: none;
+}
+
+
+/* Custom Page Styles */
+
+/* ----- services ----- */
+.service-mobile-phlebotomy {
+}
+
+.service-biofeedback-scan {
+}
+
+.service-spatial-harmony {
+}
+
+.service-health-consulting {
 }

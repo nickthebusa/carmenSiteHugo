@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section>
+<section class="service-{{ .File.ContentBaseName }}">
   {{ range .Params.sections }}
   {{ $type := .type }}
   {{ $id := .id }}
@@ -11,8 +11,6 @@
   <!-- component {{ $id }} not found -->
   {{ warnf "Missing component %q in collection %q" $id $type }}
   {{ end }}
-  <!-- divider at bottom of every component -->
-  <div class="divider"></div>
   {{ end }}
 </section>
 

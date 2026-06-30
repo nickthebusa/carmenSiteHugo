@@ -16,3 +16,5 @@ TODO:
   (when removing the component, remove the association from the page)
 
 - see if there is a way to go to page, add section then create component there
+
+- for each page, have an associated class name that i can use in a section to have style changes for that page
