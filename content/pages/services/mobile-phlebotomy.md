@@ -6,5 +6,7 @@ build:
   render: always
 image: /images/blood_vial_image.webp
 summary: Professional blood draw services conveniently performed at your location.
-sections: []
+sections:
+  - type: heading
+    id: "20260630181942"
 ---
