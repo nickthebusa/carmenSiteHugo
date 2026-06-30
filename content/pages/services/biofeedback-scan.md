@@ -24,4 +24,8 @@ sections:
     id: "20260630230354"
   - type: banner
     id: "20260630231049"
+  - type: heading
+    id: "20260630231630"
+  - type: card
+    id: "20260630231725"
 ---
