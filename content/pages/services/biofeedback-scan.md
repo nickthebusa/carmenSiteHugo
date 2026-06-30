@@ -28,12 +28,6 @@ sections:
     id: "20260630231630"
   - type: card
     id: "20260630231725"
-  - type: heading
-    id: "20260630232234"
-  - type: card
-    id: "20260630232409"
-  - type: divider
-    id: "20260630230354"
   - type: image-div
     id: "20260630232154"
   - type: heading
