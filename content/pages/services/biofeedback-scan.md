@@ -38,4 +38,6 @@ sections:
     id: "20260630230354"
   - type: action-button
     id: "20260701000218"
+  - type: media-block
+    id: "20260701002452"
 ---
