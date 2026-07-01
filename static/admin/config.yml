@@ -122,13 +122,15 @@ collections:
     slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
     fields:
       - { label: Title, name: title, widget: string }
+      - { label: Heading, name: heading, widget: string, required: false }
       - label: Images
         name: images
         widget: list
+        required: false
         fields:
           - { label: Image, name: image, widget: image }
-          - { label: Image Alt, name: imageAlt, widget: string }
-      - { label: Body, name: body, widget: markdown }
+          - { label: Image Alt, name: imageAlt, widget: string, required: false }
+      - { label: Body, name: body, widget: markdown, required: false }
       - { label: Style Class, name: styleName, widget: string, required: false, hint: "Optional. Add a CSS class." }
 
   - name: 'action-button'
