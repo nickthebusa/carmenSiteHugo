@@ -1,7 +1,7 @@
 ---
 title: Services
 url: "/services"
-type: services
+type: "services"
 build:
     render: always
     list: always
