@@ -382,7 +382,7 @@ collections:
 
       - name: 'services-index'
         label: 'Services Page'
-        file: 'content/pages/services/_index.md'
+        file: 'content/pages/services/test.md'
         fields:
           - { label: Title, name: title, widget: string }
           - label: Sections
@@ -409,7 +409,11 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: URL, name: url, widget: string, default: '/services/<new-service>' }
-      - { label: Build Render, name: build.render, widget: hidden, default: always }
+      - label: Build
+        name: build
+        widget: object
+        fields:
+          - { label: Render, name: render, widget: hidden, default: always }
       - { label: Service Image, name: image, widget: image }
       - { label: Summary, name: summary, widget: text }
       - label: Sections
