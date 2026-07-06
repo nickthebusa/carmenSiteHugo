@@ -1,5 +1,7 @@
 ---
 title: home
+layout: home
+url: /
 sections:
   - type: overlap-layout
     id: "20260605225206"

@@ -1,7 +1,7 @@
 ---
-title: Services
-url: "/services"
-type: services
+title: services
+layout: services
+url: /services
 build:
   render: always
   list: always
