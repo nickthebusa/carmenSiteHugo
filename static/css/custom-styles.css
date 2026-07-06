@@ -41,46 +41,58 @@
   outline: 3px solid rgba(var(--nav-txt-color), 1);
 }
 
-  /* ----- image-div ----- */
-  .img-wrapper.cover-image {
-    height: 15rem;
-    width: 100%;
-    max-width: none;
-    overflow: hidden;
-    border-radius: 10px;
+/* ----- image-div ----- */
+.img-wrapper.cover-image {
+  height: 15rem;
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-wrapper.cover-image img {
+  object-fit: cover;
+}
+
+.img-wrapper.restrict-size {
+  max-width: 400px;
+}
+
+.img-wrapper.center {
+  align-self: center;
+}
+
+.img-wrapper.left {
+  align-self: flex-start;
+}
+
+/* ----- text-div ----- */
+.flex-card.no-rect {
+  background-color: rgba(var(--bg-color), 1);
+  box-shadow: none;
+}
+
+/* ----- overlap-layout ----- */
+@media (max-width: 1000px) {
+  .overlap-layout.right.three {
+    flex-direction: row-reverse;
   }
+}
 
-  .img-wrapper.cover-image img {
-    object-fit: cover;
+@media (max-width: 600px) {
+  .overlap-layout.right.three {
+    flex-direction: column;
   }
-
-  /* ----- text-div ----- */
-  .flex-card.no-rect {
-    background-color: rgba(var(--bg-color), 1);
-    box-shadow: none;
-  }
-
-  /* ----- overlap-layout ----- */
-  @media (max-width: 1000px) {
-    .overlap-layout.right.three {
-      flex-direction: row-reverse;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .overlap-layout.right.three {
-      flex-direction: column;
-    }
-  }
+}
 
 
-  /* Custom Page Styles */
+/* Custom Page Styles */
 
-  /* ----- services ----- */
-  .service-mobile-phlebotomy {}
+/* ----- services ----- */
+.service-mobile-phlebotomy {}
 
-  .service-biofeedback-scan {}
+.service-biofeedback-scan {}
 
-  .service-spatial-harmony {}
+.service-spatial-harmony {}
 
-  .service-health-consulting {}
+.service-health-consulting {}
