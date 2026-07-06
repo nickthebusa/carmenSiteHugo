@@ -382,7 +382,7 @@ collections:
 
       - name: 'services-index'
         label: 'Services Page'
-        file: 'content/pages/services/index.md'
+        file: 'content/pages/services/_index.md'
         fields:
           - { label: Title, name: title, widget: string }
           - label: Sections
