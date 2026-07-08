@@ -24,3 +24,11 @@ TODO:
 - add animation to service dropdown to let user know it is a dropdown
 
 - clean the styles on overlaylayout.three up 
+
+- make the amount of changes to git less or make sure the rebuild doesnt consume too many tokens
+
+- either deploy on vercel of cloudflare
+
+- add the custom classes in the cms somewhere to know which words to use (also try to standardize the naming)
+
+- add a maintenance page
