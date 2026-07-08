@@ -44,7 +44,7 @@
             <legend>What service(s) interests you</legend>
 
             <div data-group="services" class="services-options">
-              {{ range hugo.Data.settings.services }}
+              {{ range site.Data.settings.services }}
               <label>
                 <input type="checkbox" name="services" value="{{ .value }}" />
                 {{ .label }}
